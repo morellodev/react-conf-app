@@ -1,7 +1,7 @@
-diff --git a/node_modules/expo-modules-core/ios/ReactDelegates/RCTAppDelegate+Recreate.mm b/node_modules/expo-modules-core/ios/ReactDelegates/RCTAppDelegate+Recreate.mm
-index 18957b4..8a8b483 100644
---- a/node_modules/expo-modules-core/ios/ReactDelegates/RCTAppDelegate+Recreate.mm
-+++ b/node_modules/expo-modules-core/ios/ReactDelegates/RCTAppDelegate+Recreate.mm
+diff --git a/ios/ReactDelegates/RCTAppDelegate+Recreate.mm b/ios/ReactDelegates/RCTAppDelegate+Recreate.mm
+index 18957b4dd3c1d4cf5ea1dc4387f918a8163f9189..8a8b48321fcc4ce37da42e939306d41da027c2a6 100644
+--- a/ios/ReactDelegates/RCTAppDelegate+Recreate.mm
++++ b/ios/ReactDelegates/RCTAppDelegate+Recreate.mm
 @@ -38,6 +38,7 @@ - (UIView *)recreateRootViewWithBundleURL:(nullable NSURL *)bundleURL
      // we don't want to loop the ReactDelegate again. Otherwise it will be infinite loop.
      EXReactRootViewFactory *factory = (EXReactRootViewFactory *)rootViewFactory;

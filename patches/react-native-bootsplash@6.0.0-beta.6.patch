@@ -1,7 +1,7 @@
-diff --git a/node_modules/react-native-bootsplash/dist/commonjs/generate.js b/node_modules/react-native-bootsplash/dist/commonjs/generate.js
-index 219be98..012c291 100644
---- a/node_modules/react-native-bootsplash/dist/commonjs/generate.js
-+++ b/node_modules/react-native-bootsplash/dist/commonjs/generate.js
+diff --git a/dist/commonjs/generate.js b/dist/commonjs/generate.js
+index 219be98474bb3e7bac3c6c460d913ef5b8344549..9de2c656696631266a8ffed84ca9253f0169fc86 100644
+--- a/dist/commonjs/generate.js
++++ b/dist/commonjs/generate.js
 @@ -966,10 +966,11 @@ const withAppDelegate = config => Expo.withAppDelegate(config, config => {
      offset: 0,
      anchor: /@end/,
@@ -17,10 +17,10 @@ index 219be98..012c291 100644
            }
          `
    });
-diff --git a/node_modules/react-native-bootsplash/ios/RNBootSplash.mm b/node_modules/react-native-bootsplash/ios/RNBootSplash.mm
-index 56a8a61..218acaa 100755
---- a/node_modules/react-native-bootsplash/ios/RNBootSplash.mm
-+++ b/node_modules/react-native-bootsplash/ios/RNBootSplash.mm
+diff --git a/ios/RNBootSplash.mm b/ios/RNBootSplash.mm
+index 56a8a6188129de27d0c774cd0e90594e67260cbd..481cdc52c8a2d23f8842836cfa04b8415b829de3 100755
+--- a/ios/RNBootSplash.mm
++++ b/ios/RNBootSplash.mm
 @@ -77,9 +77,9 @@ + (void)initWithStoryboard:(NSString * _Nonnull)storyboardName
      return;
    }
@@ -48,14 +48,14 @@ index 56a8a61..218acaa 100755
                                                   object:nil];
      }
 -  });
-+//  });
++  // });
  }
  
  + (void)onJavaScriptDidLoad {
-diff --git a/node_modules/react-native-bootsplash/src/generate.ts b/node_modules/react-native-bootsplash/src/generate.ts
-index 95a0f4b..7d74725 100644
---- a/node_modules/react-native-bootsplash/src/generate.ts
-+++ b/node_modules/react-native-bootsplash/src/generate.ts
+diff --git a/src/generate.ts b/src/generate.ts
+index 95a0f4bce03882c7465478a80ef309e41ec97854..7d747259e8648cdc004d027f3e734e86dbc6a905 100644
+--- a/src/generate.ts
++++ b/src/generate.ts
 @@ -1323,10 +1323,11 @@ const withAppDelegate: ExpoPlugin = (config) =>
        offset: 0,
        anchor: /@end/,

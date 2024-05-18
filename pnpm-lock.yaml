@@ -7,6 +7,14 @@ settings:
 overrides:
   react: 18.2.0
 
+patchedDependencies:
+  expo-modules-core@1.12.11:
+    hash: rcfmd6uizrcwnh4oneuguhb5ky
+    path: patches/expo-modules-core@1.12.11.patch
+  react-native-bootsplash@6.0.0-beta.6:
+    hash: j62ptecybzshufaizl35kvd67u
+    path: patches/react-native-bootsplash@6.0.0-beta.6.patch
+
 importers:
 
   .:
@@ -112,7 +120,7 @@ importers:
         version: 0.74.1(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4))(@types/react@18.2.79)(react@18.2.0)
       react-native-bootsplash:
         specifier: ^6.0.0-beta.6
-        version: 6.0.0-beta.6(react-native@0.74.1(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0)
+        version: 6.0.0-beta.6(patch_hash=j62ptecybzshufaizl35kvd67u)(react-native@0.74.1(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0)
       react-native-dynamic-app-icon:
         specifier: ^1.1.0
         version: 1.1.0(react-native@0.74.1(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4))(@types/react@18.2.79)(react@18.2.0))
@@ -156,9 +164,6 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.1.3
         version: 5.1.3(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.2.5)
-      patch-package:
-        specifier: ^8.0.0
-        version: 8.0.0
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -1697,9 +1702,6 @@ packages:
   '@xmldom/xmldom@0.8.10':
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
-
-  '@yarnpkg/lockfile@1.1.0':
-    resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
 
   '@zxing/text-encoding@0.9.0':
     resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
@@ -3790,10 +3792,6 @@ packages:
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
-  json-stable-stringify@1.1.1:
-    resolution: {integrity: sha512-SU/971Kt5qVQfJpyDveVhQ/vya+5hvrjClFOcr8c0Fq5aODJjMwutrOfCU+eCnVD5gpx1Q3fEqkyom77zH1iIg==}
-    engines: {node: '>= 0.4'}
-
   json5@1.0.2:
     resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==}
     hasBin: true
@@ -3809,9 +3807,6 @@ packages:
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
-  jsonify@0.0.1:
-    resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
-
   jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
@@ -3822,9 +3817,6 @@ packages:
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
-
-  klaw-sync@6.0.0:
-    resolution: {integrity: sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ==}
 
   kleur@3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
@@ -4425,11 +4417,6 @@ packages:
   password-prompt@1.1.3:
     resolution: {integrity: sha512-HkrjG2aJlvF0t2BMH0e2LB/EHf3Lcq3fNMzy4GYHcQblAvOl+QQji1Lx7WRBMqpVK8p+KR7bCg7oqAMXtdgqyw==}
 
-  patch-package@8.0.0:
-    resolution: {integrity: sha512-da8BVIhzjtgScwDJ2TtKsfT5JFWz1hYoBl9rUQ1f38MC2HwnEIkK8VN3dKMKcP7P7bvvgzNDbfNHtx3MsQb5vA==}
-    engines: {node: '>=14', npm: '>5'}
-    hasBin: true
-
   path-exists@3.0.0:
     resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
     engines: {node: '>=4'}
@@ -4980,10 +4967,6 @@ packages:
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
-
-  slash@2.0.0:
-    resolution: {integrity: sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==}
-    engines: {node: '>=6'}
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -6234,7 +6217,7 @@ snapshots:
   '@babel/plugin-transform-class-properties@7.24.1(@babel/core@7.24.4)':
     dependencies:
       '@babel/core': 7.24.4
-      '@babel/helper-create-class-features-plugin': 7.24.1(@babel/core@7.24.4)
+      '@babel/helper-create-class-features-plugin': 7.24.5(@babel/core@7.24.4)
       '@babel/helper-plugin-utils': 7.24.5
 
   '@babel/plugin-transform-class-static-block@7.24.4(@babel/core@7.24.4)':
@@ -8080,8 +8063,6 @@ snapshots:
 
   '@xmldom/xmldom@0.8.10': {}
 
-  '@yarnpkg/lockfile@1.1.0': {}
-
   '@zxing/text-encoding@0.9.0':
     optional: true
 
@@ -9461,7 +9442,7 @@ snapshots:
       find-up: 5.0.0
       fs-extra: 9.1.0
 
-  expo-modules-core@1.12.11:
+  expo-modules-core@1.12.11(patch_hash=rcfmd6uizrcwnh4oneuguhb5ky):
     dependencies:
       invariant: 2.2.4
 
@@ -9581,7 +9562,7 @@ snapshots:
       expo-font: 12.0.5(expo@51.0.8(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4)))
       expo-keep-awake: 13.0.2(expo@51.0.8(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4)))
       expo-modules-autolinking: 1.11.1
-      expo-modules-core: 1.12.11
+      expo-modules-core: 1.12.11(patch_hash=rcfmd6uizrcwnh4oneuguhb5ky)
       fbemitter: 3.0.0
       whatwg-url-without-unicode: 8.0.0-3
     transitivePeerDependencies:
@@ -10726,13 +10707,6 @@ snapshots:
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
-  json-stable-stringify@1.1.1:
-    dependencies:
-      call-bind: 1.0.7
-      isarray: 2.0.5
-      jsonify: 0.0.1
-      object-keys: 1.1.1
-
   json5@1.0.2:
     dependencies:
       minimist: 1.2.8
@@ -10749,8 +10723,6 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
-  jsonify@0.0.1: {}
-
   jsx-ast-utils@3.3.5:
     dependencies:
       array-includes: 3.1.8
@@ -10763,10 +10735,6 @@ snapshots:
       json-buffer: 3.0.1
 
   kind-of@6.0.3: {}
-
-  klaw-sync@6.0.0:
-    dependencies:
-      graceful-fs: 4.2.11
 
   kleur@3.0.3: {}
 
@@ -11434,24 +11402,6 @@ snapshots:
       ansi-escapes: 4.3.2
       cross-spawn: 7.0.3
 
-  patch-package@8.0.0:
-    dependencies:
-      '@yarnpkg/lockfile': 1.1.0
-      chalk: 4.1.2
-      ci-info: 3.9.0
-      cross-spawn: 7.0.3
-      find-yarn-workspace-root: 2.0.0
-      fs-extra: 9.1.0
-      json-stable-stringify: 1.1.1
-      klaw-sync: 6.0.0
-      minimist: 1.2.8
-      open: 7.4.2
-      rimraf: 2.7.1
-      semver: 7.6.0
-      slash: 2.0.0
-      tmp: 0.0.33
-      yaml: 2.4.2
-
   path-exists@3.0.0: {}
 
   path-exists@4.0.0: {}
@@ -11638,7 +11588,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-bootsplash@6.0.0-beta.6(react-native@0.74.1(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0):
+  react-native-bootsplash@6.0.0-beta.6(patch_hash=j62ptecybzshufaizl35kvd67u)(react-native@0.74.1(@babel/core@7.24.4)(@babel/preset-env@7.24.5(@babel/core@7.24.4))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0):
     dependencies:
       '@emotion/hash': 0.9.1
       '@expo/config': 9.0.2
@@ -12094,8 +12044,6 @@ snapshots:
       is-arrayish: 0.3.2
 
   sisteransi@1.0.5: {}
-
-  slash@2.0.0: {}
 
   slash@3.0.0: {}
 

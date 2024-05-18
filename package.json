@@ -10,7 +10,6 @@
     "web": "expo start --web",
     "test": "jest",
     "sync-api": "node ./scripts/syncApi.js",
-    "postinstall": "patch-package",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -64,12 +63,8 @@
     "eslint-config-expo": "^7.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "patch-package": "^8.0.0",
     "prettier": "^3.2.5",
     "typescript": "~5.3.3"
-  },
-  "resolutions": {
-    "react": "18.2.0"
   },
   "jest": {
     "preset": "jest-expo",
@@ -82,6 +77,15 @@
       "exclude": [
         "expo-splash-screen"
       ]
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "18.2.0"
+    },
+    "patchedDependencies": {
+      "expo-modules-core@1.12.11": "patches/expo-modules-core@1.12.11.patch",
+      "react-native-bootsplash@6.0.0-beta.6": "patches/react-native-bootsplash@6.0.0-beta.6.patch"
     }
   }
 }
